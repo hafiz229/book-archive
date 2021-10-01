@@ -53,15 +53,23 @@ const displaySearchResult = (books, totalSearch) => {
     div.classList.add("col");
 
     div.innerHTML = `
+    <div class="d-flex align-items-center">
+    <div class="">
     <img src="${source}" width="300" height="300"/>
-    <p><span class="fw-bold">Book Title: </span>${
+    <p><span class="fw-bold text-white">Book Title: </span>${
       book.title ? book.title : ""
     }</p>
-    <p><span class="fw-bold">Author: </span>${book.author_name?.[0] || ""}</p>
-    <p><span class="fw-bold">Publisher: </span>${book.publisher?.[0] || ""}</p>
-    <p><span class="fw-bold">First Published Year: </span>${
+    <p><span class="fw-bold text-white">Author: </span>${
+      book.author_name?.[0] || ""
+    }</p>
+    <p><span class="fw-bold text-white">Publisher: </span>${
+      book.publisher?.[0] || ""
+    }</p>
+    <p><span class="fw-bold text-white">First Published Year: </span>${
       book.publish_year?.[0] || ""
     }</p>
+    </div>
+    </div>
     `;
     searchResult.appendChild(div);
   });

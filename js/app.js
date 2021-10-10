@@ -56,18 +56,18 @@ const displaySearchResult = (books, totalSearch) => {
     <div class="d-flex align-items-center">
     <div class="">
     <img src="${source}" width="300" height="300"/>
-    <p><span class="fw-bold text-white">Book Title: </span>${
-      book.title ? book.title : ""
-    }</p>
-    <p><span class="fw-bold text-white">Author: </span>${
-      book.author_name?.[0] || ""
-    }</p>
-    <p><span class="fw-bold text-white">Publisher: </span>${
-      book.publisher?.[0] || ""
-    }</p>
-    <p><span class="fw-bold text-white">First Published Year: </span>${
-      book.publish_year?.[0] || ""
-    }</p>
+    <p><span class="fw-bold text-white">Book Title: </span>
+    <span class="text-white">${book.title ? book.title : ""}</span>
+    </p>
+    <p><span class="fw-bold text-white">Author: </span>
+    <span class="text-white">${book.author_name?.[0] || ""}</span>
+    </p>
+    <p><span class="fw-bold text-white">Publisher: </span>
+    <span class="text-white">${book.publisher?.[0] || ""}</span>
+    </p>
+    <p><span class="fw-bold text-white">First Published Year: </span>
+    <span class="text-white">${book.publish_year?.[0] || ""}</span>
+    </p>
     </div>
     </div>
     `;
